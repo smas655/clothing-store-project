@@ -2,3 +2,26 @@ orazov:
   services:
     catalogue:
       uri: http://localhost:8081
+      registration-id: keycloak
+
+spring:
+    datasource:
+      url: jdbc:postgresql://localhost:5434/manager
+      username: manager
+      password: manager
+    security:
+      oauth2:
+        client:
+          provider:
+            keycloak:
+              issuer-uri: http://localhost:8082/realms/store
+              user-name-attribute: preferred_username
+          registration:
+            keycloak:
+              client-id: manager-app
+              client-secret: sSqfl3o1H36jCTZ9gfpX69bBlayUKLLW
+              scope:
+                - openid
+                - view_catalogue
+                - edit_catalogue
+                - microprofile-jwt

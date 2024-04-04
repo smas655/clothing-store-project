@@ -1,6 +1,7 @@
 package com.orazov.catalogue.service;
 
 import com.orazov.catalogue.entity.Product;
+import com.orazov.catalogue.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

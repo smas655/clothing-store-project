@@ -34,12 +34,12 @@ public class ProductController {
 
     @GetMapping
     public String getProduct() {
-        return "catalogue/products/edit";
+        return "catalogue/products/product";
     }
 
     @GetMapping("edit")
     public String getProductEditPage() {
-        return "templates/catalogue.products/edit";
+        return "catalogue/products/edit";
     }
 
     @PostMapping("edit")
@@ -72,6 +72,6 @@ public class ProductController {
         model.addAttribute("error",
                 this.messageSource.getMessage(exception.getMessage(), new Object[0],
                         exception.getMessage(), locale));
-        return "errors/404";
+        return "catalogue/errors/404";
     }
 }

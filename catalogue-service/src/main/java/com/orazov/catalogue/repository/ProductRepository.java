@@ -1,4 +1,4 @@
-package com.orazov.catalogue.service;
+package com.orazov.catalogue.repository;
 
 import com.orazov.catalogue.entity.Product;
 import org.springframework.data.repository.CrudRepository;
